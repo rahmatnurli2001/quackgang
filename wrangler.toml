@@ -6,4 +6,4 @@ directory="./public"
 [[d1_databases]]
 binding="DB"
 database_name="quackgang"
-database_id="REPLACE_WITH_D1_ID"
+database_id="cdbe5c1f-b9e3-4ba9-8b32-10e1f727410f"
