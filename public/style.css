@@ -165,3 +165,61 @@ body{font-family:Arial,Helvetica,sans-serif}
 @media(max-width:700px){
   .counter-bar{min-height:3px;}
 }
+
+/* FINAL COUNTER ONLY — exact position over the original artwork */
+.counter{
+  position:absolute;
+  left:19.35%;
+  top:48.15%;
+  width:18.0%;
+  height:2.7%;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  background:#171717;
+  color:#fff;
+  font-size:2.65cqw;
+  font-weight:900;
+  line-height:1;
+  z-index:7;
+  pointer-events:none;
+}
+.counter-number{color:#ffc400}
+.counter-total{color:#fff}
+.counter-bar-fill{
+  position:absolute;
+  left:11.6%;
+  top:52.80%;
+  width:0%;
+  height:.65%;
+  min-height:4px;
+  background:#ffc400;
+  border-radius:999px;
+  z-index:8;
+  pointer-events:none;
+}
+@media(max-width:700px){
+  .counter{font-size:2.65cqw}
+  .counter-bar-fill{min-height:3px}
+}
+
+/* USER FINAL DESIGN: counter text/bar are baked into design.png.
+   Live value is still fetched by app.js; visual artwork stays unchanged. */
+.counter{
+  position:absolute;
+  left:18.8%;
+  top:49.7%;
+  width:20%;
+  height:2.8%;
+  opacity:0;
+  pointer-events:none;
+}
+.counter-bar-fill{
+  position:absolute;
+  left:11.6%;
+  top:52.8%;
+  width:0%;
+  height:.65%;
+  opacity:0;
+  pointer-events:none;
+}

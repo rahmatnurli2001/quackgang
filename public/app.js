@@ -6,12 +6,17 @@ async function updateCounter(){
     const r=await fetch("/api/count",{cache:"no-store"});
     const d=await r.json();
     const n=Math.max(0,Math.min(1000,Number(d.count)||0));
-    counter.querySelector(".counter-number").textContent=n.toLocaleString();document.getElementById("counter-bar").style.width=`${n/10}%`;
+    counter.querySelector(".counter-number").textContent=n.toLocaleString();
+    const bar=document.getElementById("counter-bar");
+    if(bar) bar.style.width=`${n/10}%`;
   }catch(e){
-    counter.querySelector(".counter-number").textContent="0";document.getElementById("counter-bar").style.width="0%";
+    counter.querySelector(".counter-number").textContent="0";
+    const bar=document.getElementById("counter-bar");
+    if(bar) bar.style.width="0%";
   }
 }
 updateCounter();
+
 const tasks=["follow","repost","like","quote"];
 const done=new Set();
 const message=document.getElementById("message");
@@ -43,7 +48,7 @@ submit.addEventListener("click",async()=>{
     const r=await fetch("/api/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({wallet:w})});
     const d=await r.json();
     if(!r.ok)throw new Error(d.error||"Submission failed.");
-    message.textContent="WHITELIST SUBMITTED ✓";wallet.value="";updateCounter();
+    message.textContent="WHITELIST SUBMITTED ✓";wallet.value="";updateCounter();updateCounter();
   }catch(e){message.style.color="#ff5555";message.textContent=e.message||"Unable to submit right now"}
   finally{submit.disabled=false}
 });
