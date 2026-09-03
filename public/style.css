@@ -13,17 +13,15 @@ body{font-family:Arial,Helvetica,sans-serif}
 .task.follow{left:36.0%;top:25.0%;width:10.0%;height:3.3%}
 .task.repost{left:36.0%;top:29.0%;width:10.0%;height:3.3%}
 .task.like{left:36.0%;top:33.0%;width:10.0%;height:3.3%}
-.task.comment{left:76.0%;top:25.0%;width:10.0%;height:3.3%}
-.comment-link{position:absolute;left:57.0%;top:33.4%;width:29.0%;height:3.0%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.25cqw;outline:none}
-.comment-link::placeholder,.wallet::placeholder{color:#999}
+.task.quote{left:79.0%;top:25.8%;width:10.5%;height:4.2%}
+.wallet::placeholder{color:#999}
 .wallet{position:absolute;left:10.5%;top:38.3%;width:79%;height:2.45%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.35cqw;outline:none}
 .check{position:absolute;width:1.55cqw;height:1.55cqw;min-width:9px;min-height:9px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.85cqw;font-weight:900;line-height:1;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;z-index:5}
 .check.visible{opacity:1}
 .follow-check{left:46.15%;top:27.0%}
 .repost-check{left:46.15%;top:31.0%}
 .like-check{left:46.15%;top:34.85%}
-.comment-check{left:86.95%;top:27.0%}
-.comment-link-check{left:86.95%;top:31.95%}
+.quote-check{left:88.0%;top:26.9%}
 .submit{position:absolute;left:31.8%;top:43.0%;width:36.4%;height:3.8%;border:0;background:transparent;cursor:pointer;touch-action:manipulation}
 #message{position:absolute;left:20%;top:47%;width:60%;text-align:center;font-size:1.15cqw;font-weight:900;color:#20d84b;z-index:6}
 .anchor{position:absolute;left:0;top:50%;width:1px;height:1px}
@@ -31,6 +29,30 @@ body{font-family:Arial,Helvetica,sans-serif}
 .accessible-section h2{color:#ffc400}
 @media(max-width:700px){
   .check{border-width:1px;font-size:.82cqw}
-  .comment-link,.wallet{font-size:2.1cqw}
+  .wallet{font-size:2.1cqw}
   #message{font-size:2cqw}
 }
+
+
+/* Quote task: same dimensions and typography as Follow/Repost/Like */
+.task.quote{
+  position:absolute;
+  left:53%;
+  top:51.5%;
+  width:42%;
+  height:5.2%;
+  display:block;
+  background:transparent;
+  cursor:pointer;
+}
+@media(max-width:700px){
+  .task.quote{
+    left:53%;
+    top:51.5%;
+    width:42%;
+    height:5.2%;
+  }
+}
+
+/* Keep the top-right JOIN THE GANG hotspot clickable on all devices */
+.hotspot.join{z-index:20;cursor:pointer;}
