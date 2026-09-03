@@ -115,3 +115,28 @@ body{font-family:Arial,Helvetica,sans-serif}
   .like-check{left:47.07%;top:37.05%}
   .quote-check{left:87.79%;top:28.97%}
 }
+
+/* LIVE COUNTER ONLY — existing layout/task positions are unchanged */
+.counter{
+  position:absolute;
+  left:19.4%;
+  top:49.15%;
+  width:20%;
+  height:3.0%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  white-space:nowrap;
+  background:#171717;
+  color:#fff;
+  font-size:2.8cqw;
+  font-weight:900;
+  line-height:1;
+  z-index:7;
+  pointer-events:none;
+}
+.counter-number{color:#ffc400;}
+.counter-total{color:#fff;}
+@media(max-width:700px){
+  .counter{font-size:2.8cqw;}
+}
