@@ -1,11 +1,3 @@
-
-// Top-right JOIN THE GANG button scrolls directly to the whitelist tasks.
-const joinButton=document.querySelector('.hotspot.join');
-const whitelistAnchor=document.getElementById('whitelist');
-joinButton?.addEventListener('click',e=>{
-  e.preventDefault();
-  whitelistAnchor?.scrollIntoView({behavior:'smooth',block:'center'});
-});
 const tasks=["follow","repost","like","quote"];
 const done=new Set();
 const message=document.getElementById("message");

@@ -53,6 +53,3 @@ body{font-family:Arial,Helvetica,sans-serif}
     height:5.2%;
   }
 }
-
-/* Keep the top-right JOIN THE GANG hotspot clickable on all devices */
-.hotspot.join{z-index:20;cursor:pointer;}
