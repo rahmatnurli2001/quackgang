@@ -5,7 +5,9 @@ const wallet=document.getElementById("wallet");
 const submit=document.getElementById("submit");
 
 function showCheck(name){done.add(name);document.querySelector(`.${name}-check`)?.classList.add("visible")}
-const quoteText="4444 QUACK GANG IS COMING TO ROBINHOOD CHAIN\n\n#ROBINHOOD #QUACKGANG #NFT";
+const quoteText="4444 QUACK GANG IS COMING TO ROBINHOOD CHAIN
+
+#ROBINHOOD #QUACKGANG #NFT";
 const pinnedPost="https://x.com/quackgangrh/status/2095050569119674381";
 const quoteTask=document.querySelector('[data-task="quote"]');
 if(quoteTask){
