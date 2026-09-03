@@ -2,52 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>QUACK GANG — Whitelist</title>
-<link rel="stylesheet" href="style.css?v=final-responsive-2">
+<link rel="stylesheet" href="style.css?v=2026-all-devices">
 </head>
 <body>
-<main class="page">
-  <img src="final-design.jpg" class="design" alt="QUACK GANG Whitelist">
-
+<main class="page" id="home">
+  <img class="design" src="design.png" alt="QUACK GANG whitelist website">
   <div class="overlay">
-    <a class="nav home" href="#home" aria-label="Home"></a>
-    <a class="nav about" href="#about" aria-label="About"></a>
-    <a class="nav faq" href="#faq" aria-label="FAQ"></a>
-    <a class="nav join" href="#whitelist" aria-label="Join the Gang"></a>
+    <a class="hotspot home" href="#home" aria-label="Home"></a>
+    <a class="hotspot about" href="#about" aria-label="About"></a>
+    <a class="hotspot faq" href="#faq" aria-label="FAQ"></a>
+    <a class="hotspot join" href="#whitelist" aria-label="Join the Gang"></a>
 
-    <a class="task follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" data-task="follow" aria-label="Follow QUACK GANG"></a>
-    <a class="task repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="repost" aria-label="Repost pinned post"></a>
-    <a class="task like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like" aria-label="Like pinned post"></a>
-    <a class="task comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="comment" aria-label="Comment GANG"></a>
+    <a class="task follow" data-task="follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" aria-label="Follow QUACK GANG on X"></a>
+    <a class="task repost" data-task="repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" aria-label="Repost pinned post"></a>
+    <a class="task like" data-task="like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" aria-label="Like pinned post"></a>
+    <a class="task comment" data-task="comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" aria-label="Comment GANG"></a>
 
-    <input id="commentLink" class="comment-link" type="url" placeholder="Paste your comment link here..." autocomplete="off" aria-label="GANG comment link">
-
-    <span class="check follow-check">✓</span>
-    <span class="check repost-check">✓</span>
-    <span class="check like-check">✓</span>
-    <span class="check comment-check">✓</span>
-    <span class="check comment-link-check">✓</span>
-
+    <input id="commentLink" class="comment-link" type="url" placeholder="Paste your comment link here" autocomplete="off" aria-label="GANG comment link">
     <input id="wallet" class="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off" aria-label="Wallet address">
+
+    <span class="check follow-check" aria-hidden="true">✓</span>
+    <span class="check repost-check" aria-hidden="true">✓</span>
+    <span class="check like-check" aria-hidden="true">✓</span>
+    <span class="check comment-check" aria-hidden="true">✓</span>
+    <span class="check comment-link-check" aria-hidden="true">✓</span>
+
     <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
     <div id="message" role="status" aria-live="polite"></div>
-
-    <span id="home"></span>
-    <span id="about"></span>
-    <span id="faq"></span>
-    <span id="whitelist"></span>
+    <span id="whitelist" class="anchor"></span>
   </div>
 </main>
 
-<div id="infoModal" class="modal" aria-hidden="true">
-  <div class="modal-box">
-    <button id="closeModal" class="modal-close" type="button" aria-label="Close">×</button>
-    <h2 id="modalTitle"></h2>
-    <div id="modalBody"></div>
-  </div>
-</div>
-
+<section id="about" class="accessible-section">
+  <h2>ABOUT QUACK GANG</h2>
+  <p>QUACK GANG is a collection of 4,444 unique QUACKS on Robinhood Chain.</p>
+  <p>Built for the different ones. Be different. Be Quack.</p>
+</section>
+<section id="faq" class="accessible-section">
+  <h2>FAQ</h2>
+  <p>1,000 first wallets. Complete the X tasks, comment GANG, paste your comment link, and submit your wallet.</p>
+</section>
 <script src="app.js"></script>
 </body>
 </html>
