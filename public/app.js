@@ -5,14 +5,18 @@ const wallet=document.getElementById("wallet");
 const submit=document.getElementById("submit");
 
 function showCheck(name){done.add(name);document.querySelector(`.${name}-check`)?.classList.add("visible")}
-const quoteText="4444 QUACK GANG IS COMING TO ROBINHOOD CHAIN
 
-#ROBINHOOD #QUACKGANG #NFT";
-const pinnedPost="https://x.com/quackgangrh/status/2095050569119674381";
+
+const quoteText="4444 QUACK GANG IS COMING TO ROBINHOOD CHAIN\n#ROBINHOOD #QUACKGANG #NFT";
+const pinnedPost="https://x.com/QuackGangRH/status/2095050569119674381?s=20";
 const quoteTask=document.querySelector('[data-task="quote"]');
+
 if(quoteTask){
-  quoteTask.href=`https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pinnedPost)}`;
+  quoteTask.href=`https://x.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pinnedPost)}`;
+  quoteTask.target="_blank";
+  quoteTask.rel="noopener";
 }
+
 tasks.forEach(name=>document.querySelector(`[data-task="${name}"]`)?.addEventListener("click",()=>showCheck(name)));
 function validWallet(v){return /^0x[a-fA-F0-9]{20,120}$/.test(v)}
 submit.addEventListener("click",async()=>{
