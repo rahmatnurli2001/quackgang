@@ -9,8 +9,8 @@
 <body>
 <main class="page">
   <img src="final-design.jpg" class="design" alt="QUACK GANG Whitelist">
-
   <div class="overlay">
+
     <a class="nav home" href="#home" aria-label="Home"></a>
     <a class="nav about" href="#about" aria-label="About"></a>
     <a class="nav faq" href="#faq" aria-label="FAQ"></a>
@@ -21,17 +21,23 @@
     <a class="task like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like" aria-label="Like pinned post"></a>
     <a class="task comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="comment" aria-label="Comment GANG"></a>
 
-    <input id="commentLink" class="comment-link" type="url" placeholder="Paste your comment link here..." autocomplete="off" aria-label="GANG comment link">
+    <input id="commentLink" class="comment-link" type="url"
+      placeholder="Paste your comment link here..." autocomplete="off"
+      aria-label="GANG comment link">
 
     <span class="check follow-check">✓</span>
     <span class="check repost-check">✓</span>
     <span class="check like-check">✓</span>
     <span class="check comment-check">✓</span>
 
-    <input id="wallet" class="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off" aria-label="Wallet address">
+    <input id="wallet" class="wallet" type="text"
+      placeholder="Enter your wallet address (0x...)" autocomplete="off"
+      aria-label="Wallet address">
+
     <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
     <div id="message" role="status" aria-live="polite"></div>
 
+    <span id="liveCount" class="live-count">0 / 1,000</span>
     <span id="home"></span>
     <span id="about"></span>
     <span id="faq"></span>
