@@ -1,0 +1,56 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#ffc400;color:#111;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+.navbar{height:92px;padding:12px 3%;display:flex;align-items:center;gap:55px;background:#1198e8;position:relative;z-index:20}
+.logo{font-size:44px;line-height:.78;font-weight:1000;font-style:italic;letter-spacing:-4px;color:#fff;-webkit-text-stroke:3px #111;paint-order:stroke fill}
+.logo span{display:block;color:#ffc400;margin-left:40px}
+nav{display:flex;gap:55px;margin:auto}
+nav a{color:#fff;font-size:19px;font-weight:900}
+nav .active{color:#ffc400;border-bottom:3px solid #ffc400;padding-bottom:9px}
+.join{background:#ffc400;border:3px solid #111;border-radius:14px;box-shadow:0 6px #111;padding:11px 19px;font-weight:1000;font-size:18px;white-space:nowrap}
+
+.hero{background:#1198e8}
+.hero-image{width:100%;height:min(48vw,492px);margin:0;background-image:url("hero-reference.jpg");background-size:100% 100%;background-position:center top;background-repeat:no-repeat}
+
+.whitelist{background:#101010;padding:0 5% 55px}
+.card{max-width:920px;margin:-3px auto 0;background:#101010;border:2px solid #ffc400;border-radius:25px;padding:22px 38px 28px;color:#fff;position:relative}
+.card h1{text-align:center;font-size:52px;margin-bottom:4px}
+.intro{text-align:center;font-size:18px;line-height:1.35;margin-bottom:20px}
+.intro b,.label{color:#ffc400}
+.tasks{display:grid;gap:8px}
+.task{display:grid;grid-template-columns:68px 1fr 140px 40px;gap:14px;align-items:center;background:#171717;border:1px solid #333;border-radius:12px;padding:9px 13px}
+.icon{width:58px;height:58px;border-radius:9px;background:#000;display:grid;place-items:center;font-size:33px}
+.repost{color:#00ed8a}.like{color:#ff2d63}.copy strong,.copy small{display:block}.copy strong{font-size:17px}.copy small{font-size:13px;color:#ddd;margin-top:4px}
+.task-btn{background:#ffc400;border:2px solid #111;border-radius:6px;padding:10px 5px;text-align:center;font-weight:1000}
+.check{width:38px;height:38px;border-radius:50%;background:#12bd46;display:grid;place-items:center;font-size:25px;font-weight:1000}
+.wallet{margin-top:21px;text-align:center}.label{display:flex;align-items:center;gap:13px;justify-content:center;font-weight:1000;font-size:17px;margin-bottom:10px}.label span{height:2px;background:#ffc400;flex:1}
+#wallet{width:100%;padding:16px;background:#191919;border:1px solid #444;border-radius:10px;color:#fff;font-size:17px;outline:none}
+.human{display:flex;justify-content:center;align-items:center;gap:9px;margin:13px 0;font-size:16px}.human input{width:22px;height:22px}
+.submit{width:72%;padding:13px;background:#ffc400;border:2px solid #111;border-radius:8px;box-shadow:0 5px #000;font-size:21px;font-weight:1000;cursor:pointer}
+#message{min-height:20px;margin-top:10px;font-weight:900}
+.stats{margin-top:18px;border:1px solid #444;border-radius:12px;padding:14px;display:grid;grid-template-columns:1fr 1px 1fr;gap:18px}
+.stat{display:flex;gap:14px;align-items:center}.stat-icon{background:#ffc400;border-radius:12px;padding:15px;font-size:25px}.stat b,.stat strong,.stat small{display:block}.stat strong{font-size:28px;color:#ffc400}.stat small{font-size:12px;color:#ddd;margin-top:3px}.vline{background:#555}.people{font-size:35px}.note em{color:#ffc400;font-style:normal;font-weight:900}.bar{grid-column:1/-1;height:12px;border-radius:20px;background:#333;overflow:hidden}.bar i{display:block;height:100%;width:0;background:#ffc400}
+
+.info{max-width:920px;margin:60px auto;padding:0 5%;background:#ffc400}.info h2{font-size:40px;margin-bottom:15px}.info p{font-size:18px;line-height:1.6;margin-bottom:10px}.faq details{background:#fff;border:2px solid #111;padding:14px 17px;margin:10px 0;box-shadow:4px 4px #111}.faq summary{font-weight:900;cursor:pointer}.faq details p{margin:10px 0 0}
+footer{background:#ffc400;border-top:5px solid #111;padding:27px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-logo{font-size:27px;font-weight:1000;font-style:italic}.footer-logo span{display:block;margin-left:23px}
+
+@media(max-width:700px){
+.navbar{height:70px;padding:9px 14px;gap:8px}.logo{font-size:27px;letter-spacing:-2px;-webkit-text-stroke:2px #111}.logo span{margin-left:24px}nav{display:none}.join{margin-left:auto;font-size:12px;padding:9px 10px;box-shadow:0 4px #111}
+.hero-image{height:360px;background-size:100% 100%;background-position:center top}
+.whitelist{padding:0 9px 35px}.card{padding:17px 10px 22px;border-radius:17px}.card h1{font-size:38px}.intro{font-size:13px}.task{grid-template-columns:43px 1fr 70px 27px;gap:6px;padding:7px}.icon{width:40px;height:40px;font-size:23px}.copy strong{font-size:11px}.copy small{font-size:9px}.task-btn{font-size:9px;padding:7px 2px}.check{width:25px;height:25px;font-size:17px}.label{font-size:12px}.submit{width:100%;font-size:15px}.stats{grid-template-columns:1fr;gap:10px}.vline{display:none}.stat strong{font-size:22px}.stat small{font-size:10px}.info{margin:43px auto}.info h2{font-size:31px}footer{flex-direction:column;text-align:center}
+}
+
+
+/* Task state */
+.task-check, .check, .checkmark, .status {
+  opacity: .45;
+  transition: .2s ease;
+}
+.task-completed .task-check,
+.task-completed .check,
+.task-completed .checkmark,
+.task-completed .status {
+  opacity: 1;
+}
