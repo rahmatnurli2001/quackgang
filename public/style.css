@@ -16,8 +16,8 @@ body{font-family:Arial,Helvetica,sans-serif}
 .task.comment{left:76.0%;top:25.0%;width:10.0%;height:3.3%}
 .comment-link{position:absolute;left:57.0%;top:33.4%;width:29.0%;height:3.0%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.25cqw;outline:none}
 .comment-link::placeholder,.wallet::placeholder{color:#999}
-.wallet{position:absolute;left:10.5%;top:39.0%;width:79%;height:3.0%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.35cqw;outline:none}
-.check{position:absolute;width:2.9cqw;height:2.9cqw;min-width:18px;min-height:18px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.7cqw;font-weight:900;line-height:1;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;z-index:5}
+.wallet{position:absolute;left:10.5%;top:38.3%;width:79%;height:2.45%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.35cqw;outline:none}
+.check{position:absolute;width:1.9cqw;height:1.9cqw;min-width:12px;min-height:12px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.15cqw;font-weight:900;line-height:1;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;z-index:5}
 .check.visible{opacity:1}
 .follow-check{left:45.3%;top:26.0%}
 .repost-check{left:45.3%;top:30.0%}
@@ -30,7 +30,7 @@ body{font-family:Arial,Helvetica,sans-serif}
 .accessible-section{max-width:900px;margin:0 auto;padding:32px 20px;background:#171717;color:#fff;border-top:3px solid #ffc400}
 .accessible-section h2{color:#ffc400}
 @media(max-width:700px){
-  .check{border-width:1px}
+  .check{border-width:1px;font-size:1.05cqw}
   .comment-link,.wallet{font-size:2.1cqw}
   #message{font-size:2cqw}
 }
