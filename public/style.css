@@ -140,3 +140,28 @@ body{font-family:Arial,Helvetica,sans-serif}
 @media(max-width:700px){
   .counter{font-size:2.8cqw;}
 }
+
+/* LIVE PROGRESS BAR ONLY — does not change existing layout */
+.counter-bar{
+  position:absolute;
+  left:5.4%;
+  top:51.75%;
+  width:35.6%;
+  height:0.65%;
+  min-height:4px;
+  background:#333;
+  border-radius:999px;
+  overflow:hidden;
+  z-index:7;
+  pointer-events:none;
+}
+.counter-bar-fill{
+  width:0%;
+  height:100%;
+  background:#ffc400;
+  border-radius:999px;
+  transition:width .25s ease;
+}
+@media(max-width:700px){
+  .counter-bar{min-height:3px;}
+}

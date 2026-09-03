@@ -6,9 +6,9 @@ async function updateCounter(){
     const r=await fetch("/api/count",{cache:"no-store"});
     const d=await r.json();
     const n=Math.max(0,Math.min(1000,Number(d.count)||0));
-    counter.querySelector(".counter-number").textContent=n.toLocaleString();
+    counter.querySelector(".counter-number").textContent=n.toLocaleString();document.getElementById("counter-bar").style.width=`${n/10}%`;
   }catch(e){
-    counter.querySelector(".counter-number").textContent="0";
+    counter.querySelector(".counter-number").textContent="0";document.getElementById("counter-bar").style.width="0%";
   }
 }
 updateCounter();
