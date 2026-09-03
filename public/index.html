@@ -10,34 +10,30 @@
 <main class="page">
   <img src="final-design.jpg" class="design" alt="QUACK GANG Whitelist">
   <div class="overlay">
+    <a class="nav home" href="#home"></a>
+    <a class="nav about" href="#about"></a>
+    <a class="nav faq" href="#faq"></a>
+    <a class="nav join" href="#whitelist"></a>
 
-    <a class="nav home" href="#home" aria-label="Home"></a>
-    <a class="nav about" href="#about" aria-label="About"></a>
-    <a class="nav faq" href="#faq" aria-label="FAQ"></a>
-    <a class="nav join" href="#whitelist" aria-label="Join the Gang"></a>
+    <a class="task follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" data-task="follow"></a>
+    <a class="task repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="repost"></a>
+    <a class="task like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like"></a>
+    <a class="task comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="comment"></a>
 
-    <a class="task follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" data-task="follow" aria-label="Follow QUACK GANG"></a>
-    <a class="task repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="repost" aria-label="Repost pinned post"></a>
-    <a class="task like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like" aria-label="Like pinned post"></a>
-    <a class="task comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="comment" aria-label="Comment GANG"></a>
-
-    <input id="commentLink" class="comment-link" type="url"
-      placeholder="Paste your comment link here..." autocomplete="off"
-      aria-label="GANG comment link">
+    <input id="commentLink" class="comment-link" type="url" placeholder="Paste your comment link here..." autocomplete="off">
+    <input id="wallet" class="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off">
 
     <span class="check follow-check">✓</span>
     <span class="check repost-check">✓</span>
     <span class="check like-check">✓</span>
     <span class="check comment-check">✓</span>
 
-    <input id="wallet" class="wallet" type="text"
-      placeholder="Enter your wallet address (0x...)" autocomplete="off"
-      aria-label="Wallet address">
+    <button id="submit" class="submit" type="button"></button>
+    <div id="message"></div>
 
-    <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
-    <div id="message" role="status" aria-live="polite"></div>
+    <div id="counter" class="counter">0 / 1,000</div>
+    <div id="progress" class="progress"></div>
 
-    <span id="liveCount" class="live-count">0 / 1,000</span>
     <span id="home"></span>
     <span id="about"></span>
     <span id="faq"></span>
@@ -45,14 +41,13 @@
   </div>
 </main>
 
-<div id="infoModal" class="modal" aria-hidden="true">
+<div id="modal" class="modal">
   <div class="modal-box">
-    <button id="closeModal" class="modal-close" type="button" aria-label="Close">×</button>
+    <button id="close" type="button">×</button>
     <h2 id="modalTitle"></h2>
     <div id="modalBody"></div>
   </div>
 </div>
-
 <script src="app.js"></script>
 </body>
 </html>

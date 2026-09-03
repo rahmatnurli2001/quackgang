@@ -1,68 +1,54 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#ffc400}
 body{font-family:Arial,Helvetica,sans-serif}
-.page{position:relative;width:100%;max-width:1408px;margin:0 auto}
+.page{position:relative;width:100%;max-width:1448px;margin:0 auto}
 .design{display:block;width:100%;height:auto}
 .overlay{position:absolute;inset:0}
-
 .nav,.task{position:absolute;display:block;background:transparent;cursor:pointer}
-.nav.home{left:33.5%;top:2.2%;width:7%;height:5%}
-.nav.about{left:42.5%;top:2.2%;width:8%;height:5%}
-.nav.faq{left:52.5%;top:2.2%;width:7%;height:5%}
-.nav.join{right:2%;top:1.8%;width:17%;height:6%}
+.nav.home{left:33.5%;top:2.0%;width:7%;height:5.5%}
+.nav.about{left:42.5%;top:2.0%;width:8%;height:5.5%}
+.nav.faq{left:52.5%;top:2.0%;width:7%;height:5.5%}
+.nav.join{right:2%;top:1.5%;width:17%;height:6%}
 
-.task.follow{left:35%;top:51.5%;width:11%;height:5.2%}
-.task.repost{left:35%;top:58.2%;width:11%;height:5.2%}
-.task.like{left:35%;top:64.8%;width:11%;height:5.2%}
-.task.comment{left:74%;top:51.5%;width:11%;height:5.2%}
+.task.follow{left:35.8%;top:26.3%;width:11%;height:5%}
+.task.repost{left:35.8%;top:32.5%;width:11%;height:5%}
+.task.like{left:35.8%;top:38.6%;width:11%;height:5%}
+.task.comment{left:74%;top:26.3%;width:11%;height:5%}
 
-.comment-link{position:absolute;left:56.1%;top:65.35%;width:27.1%;height:4.15%;
-padding:0 13px;border:1px solid #444;border-radius:7px;background:#191919;
-color:#fff;font-size:14px;outline:none}
-.comment-link::placeholder{color:#999}
+.comment-link{position:absolute;left:56.0%;top:34.0%;width:27.2%;height:4.1%;
+padding:0 12px;border:1px solid #444;border-radius:7px;background:#191919;color:#fff;font-size:14px;outline:none}
+.comment-link::placeholder,.wallet::placeholder{color:#999}
+
+.wallet{position:absolute;left:11.7%;top:47.7%;width:76%;height:4.0%;
+padding:0 14px;border:1px solid #444;border-radius:8px;background:#191919;color:#fff;font-size:16px;outline:none}
 
 .check{position:absolute;width:30px;height:30px;border:2px solid #fff;border-radius:50%;
-display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;
-background:rgba(0,0,0,.65);opacity:0;pointer-events:none;z-index:5}
+display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;background:rgba(0,0,0,.45);
+opacity:0;pointer-events:none;z-index:5}
 .check.visible{opacity:1}
-.follow-check{left:43.2%;top:51.65%}
-.repost-check{left:43.2%;top:58.35%}
-.like-check{left:43.2%;top:64.95%}
-.comment-check{left:79.0%;top:51.65%}
+.follow-check{left:45.0%;top:26.2%}
+.repost-check{left:45.0%;top:32.4%}
+.like-check{left:45.0%;top:38.5%}
+.comment-check{left:85.3%;top:26.2%}
 
-.wallet{position:absolute;left:11.7%;top:74.05%;width:76%;height:4.05%;
-border:1px solid #444;border-radius:8px;background:#191919;color:#fff;
-padding:0 14px;font-size:16px;outline:none}
-.wallet::placeholder{color:#999}
+.submit{position:absolute;left:35.2%;top:53.0%;width:29.6%;height:4.5%;border:0;background:transparent;cursor:pointer}
 
-.submit{position:absolute;left:35.3%;top:78.35%;width:29.4%;height:4.5%;
-border:0;background:transparent;cursor:pointer}
+#message{position:absolute;left:20%;top:57.7%;width:60%;text-align:center;font-size:14px;font-weight:900;color:#20d84b}
 
-#message{position:absolute;left:20%;top:82.9%;width:60%;text-align:center;
-font-size:14px;font-weight:900;color:#20d84b;z-index:6}
+.counter{position:absolute;left:20.0%;top:85.5%;font-size:38px;line-height:1;font-weight:900;color:#ffc400;z-index:4}
+.progress{position:absolute;left:13.0%;top:93.0%;width:50%;height:1.7%;background:#ffc400;border-radius:20px;transform-origin:left center;z-index:4}
 
-.live-count{position:absolute;left:18.7%;top:58.55%;font-size:28px;font-weight:900;
-color:#ffc400;line-height:1;z-index:7;white-space:nowrap}
-.live-count::first-line{color:#ffc400}
-
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-background:rgba(0,0,0,.72);z-index:100}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.72);z-index:100}
 .modal.open{display:flex}
-.modal-box{position:relative;width:min(520px,88vw);padding:34px 30px 30px;
-background:#171717;border:3px solid #ffc400;border-radius:18px;color:#fff;
-box-shadow:0 15px 50px rgba(0,0,0,.5);text-align:center}
-.modal-box h2{margin:0 0 15px;color:#ffc400;font-size:30px}
-.modal-box p{margin:10px 0;line-height:1.55;font-size:16px}
-.modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;
-color:#fff;font-size:32px;cursor:pointer}
+.modal-box{position:relative;width:min(520px,88vw);padding:32px 28px;background:#171717;border:3px solid #ffc400;border-radius:18px;color:#fff;text-align:center}
+.modal-box h2{color:#ffc400}
+.modal-box p{line-height:1.5}
+#close{position:absolute;right:10px;top:5px;border:0;background:none;color:#fff;font-size:32px;cursor:pointer}
 
 @media(max-width:700px){
   .comment-link{font-size:7px;padding:0 6px}
   .wallet{font-size:8px}
   .check{width:18px;height:18px;font-size:11px;border-width:1px}
+  .counter{font-size:19px}
   #message{font-size:8px}
-  .live-count{font-size:15px}
-  .modal-box{padding:28px 20px 22px}
-  .modal-box h2{font-size:22px}
-  .modal-box p{font-size:12px}
 }
