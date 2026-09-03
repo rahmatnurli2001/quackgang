@@ -7,14 +7,20 @@ const submit=document.getElementById("submit");
 function showCheck(name){done.add(name);document.querySelector(`.${name}-check`)?.classList.add("visible")}
 
 
+
+
+
+
 const quoteText="4444 QUACK GANG IS COMING TO ROBINHOOD CHAIN\n#ROBINHOOD #QUACKGANG #NFT";
 const pinnedPost="https://x.com/QuackGangRH/status/2095050569119674381?s=20";
 const quoteTask=document.querySelector('[data-task="quote"]');
-
 if(quoteTask){
-  quoteTask.href=`https://x.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pinnedPost)}`;
-  quoteTask.target="_blank";
-  quoteTask.rel="noopener";
+  quoteTask.addEventListener("click",()=>{
+    quoteTask.href=`https://x.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pinnedPost)}`;
+    quoteTask.target="_blank";
+    quoteTask.rel="noopener";
+    showCheck("quote");
+  });
 }
 
 tasks.forEach(name=>document.querySelector(`[data-task="${name}"]`)?.addEventListener("click",()=>showCheck(name)));

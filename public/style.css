@@ -18,7 +18,10 @@ body{font-family:Arial,Helvetica,sans-serif}
 .wallet{position:absolute;left:10.5%;top:38.3%;width:79%;height:2.45%;padding:0 1.3cqw;border:1px solid #444;border-radius:8px;background:#171717;color:#fff;font-size:1.35cqw;outline:none}
 .check{position:absolute;width:1.55cqw;height:1.55cqw;min-width:9px;min-height:9px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.85cqw;font-weight:900;line-height:1;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;z-index:5}
 .check.visible{opacity:1}
-
+.follow-check{left:46.15%;top:27.0%}
+.repost-check{left:46.15%;top:31.0%}
+.like-check{left:46.15%;top:34.85%}
+.quote-check{left:88.0%;top:26.9%}
 .submit{position:absolute;left:31.8%;top:43.0%;width:36.4%;height:3.8%;border:0;background:transparent;cursor:pointer;touch-action:manipulation}
 #message{position:absolute;left:20%;top:47%;width:60%;text-align:center;font-size:1.15cqw;font-weight:900;color:#20d84b;z-index:6}
 .anchor{position:absolute;left:0;top:50%;width:1px;height:1px}
@@ -31,50 +34,63 @@ body{font-family:Arial,Helvetica,sans-serif}
 }
 
 
-/* Quote task: same dimensions and typography as Follow/Repost/Like */
+
+/* FINAL TASK ALIGNMENT — matches the circles/buttons in design.png */
 .task.quote{
   position:absolute;
-  left:53%;
-  top:51.5%;
-  width:42%;
-  height:5.2%;
+  left:77.2%;
+  top:27.7%;
+  width:9.8%;
+  height:3.8%;
   display:block;
   background:transparent;
   cursor:pointer;
-}
-@media(max-width:700px){
-  .task.quote{
-    left:53%;
-    top:51.5%;
-    width:42%;
-    height:5.2%;
-  }
+  touch-action:manipulation;
 }
 
-/* Precision: completion checks centered on the circles already drawn in design.png */
 .check{
+  position:absolute;
   width:2.15%;
   height:2.15%;
   min-width:0;
   min-height:0;
+  box-sizing:border-box;
   border:1.5px solid #fff;
-  font-size:1.15%;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:1.05%;
+  font-weight:900;
   line-height:1;
+  background:rgba(0,0,0,.55);
+  opacity:0;
+  pointer-events:none;
+  z-index:5;
 }
-.follow-check{left:45.9%;top:28.2%}
-.repost-check{left:45.9%;top:32.35%}
-.like-check{left:45.9%;top:36.5%}
-.quote-check{left:86.8%;top:28.2%}
+.check.visible{opacity:1}
+
+/* centered on the original white task circles */
+.follow-check{left:45.9%;top:28.0%}
+.repost-check{left:45.9%;top:32.2%}
+.like-check{left:45.9%;top:36.45%}
+.quote-check{left:86.45%;top:28.0%}
 
 @media(max-width:700px){
+  .task.quote{
+    left:77.2%;
+    top:27.7%;
+    width:9.8%;
+    height:3.8%;
+  }
   .check{
     width:2.15%;
     height:2.15%;
     border-width:1px;
-    font-size:1.15%;
+    font-size:1.05%;
   }
-  .follow-check{left:45.9%;top:28.2%}
-  .repost-check{left:45.9%;top:32.35%}
-  .like-check{left:45.9%;top:36.5%}
-  .quote-check{left:86.8%;top:28.2%}
+  .follow-check{left:45.9%;top:28.0%}
+  .repost-check{left:45.9%;top:32.2%}
+  .like-check{left:45.9%;top:36.45%}
+  .quote-check{left:86.45%;top:28.0%}
 }
