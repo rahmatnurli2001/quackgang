@@ -1,81 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>QUACK GANG — Whitelist</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section class="hero">
-  <div class="hero-art"></div>
-  <div class="hero-links">
-    <a href="#home" class="home-link">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#faq">FAQ</a>
-    <a href="#whitelist" class="join-link">JOIN THE GANG 🦆</a>
-  </div>
-</section>
+<main class="page">
+  <img src="final-design.jpg" class="design" alt="QUACK GANG Whitelist">
+  <div class="overlay">
 
-<section id="whitelist" class="whitelist">
-  <div class="card">
-    <h1>≡ WHITELIST ≡</h1>
-    <p class="intro">Complete all the tasks below and submit your wallet<br>for a chance to get <b>WHITELISTED.</b></p>
+    <a class="nav home" href="#home" aria-label="Home"></a>
+    <a class="nav about" href="#about" aria-label="About"></a>
+    <a class="nav faq" href="#faq" aria-label="FAQ"></a>
+    <a class="nav join" href="#whitelist" aria-label="Join the Gang"></a>
 
-    <div class="tasks">
-      <div class="task" data-task-card="follow">
-        <div class="icon">𝕏</div>
-        <div class="copy"><strong>Follow @QuackGangNFT on X</strong><small>Follow us on X (Twitter)</small></div>
-        <a class="task-btn" href="https://x.com/quackgangrh" target="_blank" rel="noopener" data-task="follow">FOLLOW ↗</a>
-        <span class="check">✓</span>
-      </div>
+    <a class="task follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" data-task="follow"></a>
+    <a class="task repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="repost"></a>
+    <a class="task like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like"></a>
+    <a class="task comment" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="comment"></a>
 
-      <div class="task" data-task-card="repost">
-        <div class="icon repost">↻</div>
-        <div class="copy"><strong>Repost our pinned post</strong><small>Repost the pinned post on your profile</small></div>
-        <a class="task-btn" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="repost">REPOST ↗</a>
-        <span class="check">✓</span>
-      </div>
+    <input id="commentLink" class="comment-link" type="url"
+      placeholder="Paste your comment link here..." autocomplete="off"
+      aria-label="GANG comment link">
 
-      <div class="task" data-task-card="like">
-        <div class="icon like">♥</div>
-        <div class="copy"><strong>Like our pinned post</strong><small>Like the pinned post</small></div>
-        <a class="task-btn" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener" data-task="like">LIKE ↗</a>
-        <span class="check">✓</span>
-      </div>
-    </div>
+    <span class="check follow-check">✓</span>
+    <span class="check repost-check">✓</span>
+    <span class="check like-check">✓</span>
+    <span class="check comment-check">✓</span>
 
-    <div class="wallet">
-      <div class="label"><span></span>YOUR WALLET ADDRESS<span></span></div>
-      <input id="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off">
-    </div>
+    <input id="wallet" class="wallet" type="text"
+      placeholder="Enter your wallet address (0x...)" autocomplete="off"
+      aria-label="Wallet address">
 
-    <label class="human"><input id="human" type="checkbox"> <span>I am human</span></label>
-
-    <button id="submit" class="submit">SUBMIT &amp; JOIN THE GANG 🦆</button>
+    <button id="submit" class="submit" aria-label="Submit and join the gang"></button>
     <div id="message"></div>
 
-    <div class="stats">
-      <div class="stat"><div class="stat-icon">🦆</div><div><b>WHITELIST SPOTS</b><strong><span id="count">0</span> / 1,000</strong><small>Spots are limited. First come, first served.</small></div></div>
-      <div class="stat"><div class="people">👥</div><div class="note"><b>DON'T MISS OUT!</b><small>Join early and secure your spot in the <em>QUACK GANG.</em></small></div></div>
-      <div class="bar"><i id="progress"></i></div>
-    </div>
+    <span id="home"></span>
+    <span id="about"></span>
+    <span id="faq"></span>
+    <span id="whitelist"></span>
   </div>
-</section>
-
-<section id="about" class="info">
-<h2>ABOUT</h2>
-<p>QUACK GANG is a collection of 4,444 unique QUACKS with different traits, styles, and personalities.</p>
-</section>
-
-<section id="faq" class="info faq">
-<h2>FAQ</h2>
-<details><summary>What is QUACK GANG?</summary><p>A collection of 4,444 unique QUACKS.</p></details>
-<details><summary>How can I join the Whitelist?</summary><p>Complete the required tasks and submit your wallet address.</p></details>
-<details><summary>How many whitelist spots are available?</summary><p>The first 1,000 wallets will have a place in the QUACK GANG story.</p></details>
-</section>
-
-<footer><div class="footer-logo">QUACK<br><span>GANG</span></div><small>© 2026 QUACK GANG. All rights reserved.</small><b>Built for the different ones. 🦆</b></footer>
+</main>
 <script src="app.js"></script>
 </body>
 </html>
