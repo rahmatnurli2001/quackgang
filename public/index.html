@@ -1,246 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QUACK GANG — Whitelist</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUACK GANG — Whitelist</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header class="navbar">
-  <a href="#" class="logo">QUACK <span>GANG</span></a>
-
-  <a href="#whitelist" class="join-btn">JOIN THE GANG</a>
+  <a class="logo" href="#">QUACK <span>GANG</span></a>
+  <nav>
+    <a class="active" href="#">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="join" href="#whitelist">JOIN THE GANG 🦆</a>
 </header>
 
-<main>
+<section class="hero">
+  <div class="hero-image" aria-hidden="true"></div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="hero-title">
-      <div>BE</div>
-      <div class="white-text">DIFFERENT.</div>
-      <div class="yellow-text">BE QUACK.</div>
-    </div>
-
-    <div class="story-box">
-      Be part of the story.
-    </div>
-
-    <div class="first-wallets">
-      <strong>● 1000 FIRST WALLETS</strong>
-      <br>
-      will be part of QUACK GANG.
-    </div>
-
-    <!-- CHARACTER -->
-    <div class="character">
-      <div class="rainbow">🌈</div>
-      <div class="duck-body"></div>
-      <div class="duck-shirt">
-        <div class="sale">FOR SALE</div>
-      </div>
-      <div class="duck-beak"></div>
-    </div>
-
-  </section>
-
-
-  <!-- WHITELIST -->
-  <section id="whitelist" class="whitelist-section">
-
-    <h1>WHITELIST</h1>
-
-    <p class="whitelist-intro">
-      Complete all the tasks below and submit your wallet
-      <br>
-      for a chance to get <strong>WHITELISTED.</strong>
-    </p>
+<section id="whitelist" class="whitelist">
+  <div class="card">
+    <h1>≡ WHITELIST ≡</h1>
+    <p class="intro">Complete all the tasks below and submit your wallet<br>
+      for a chance to get <b>WHITELISTED.</b></p>
 
     <div class="tasks">
-
-      <!-- FOLLOW -->
       <div class="task">
-        <div class="task-icon x-icon">𝕏</div>
-
-        <div class="task-content">
-          <h2>Follow @quackgangrh on X</h2>
-          <p>Follow us on X</p>
-
-          <a
-            href="https://x.com/quackgangrh"
-            target="_blank"
-            class="task-btn">
-            FOLLOW ↗
-          </a>
-        </div>
-
-        <div class="check">✓</div>
+        <div class="icon x">𝕏</div>
+        <div class="copy"><strong>Follow @quackgangrh on X</strong><small>Follow us on X (Twitter)</small></div>
+        <a class="task-btn" href="https://x.com/quackgangrh" data-task="follow" target="_blank">FOLLOW ↗</a>
+        <span class="check"></span>
       </div>
 
-
-      <!-- REPOST -->
       <div class="task">
-        <div class="task-icon repost-icon">↻</div>
-
-        <div class="task-content">
-          <h2>Repost our pinned post</h2>
-          <p>Repost the official QUACK GANG post</p>
-
-          <a
-            href="https://x.com/quackgangrh/status/2095050569119674381"
-            target="_blank"
-            class="task-btn">
-            REPOST ↗
-          </a>
-        </div>
-
-        <div class="check">✓</div>
+        <div class="icon repost">↻</div>
+        <div class="copy"><strong>Repost our pinned post</strong><small>Repost the pinned post on your profile</small></div>
+        <a class="task-btn" href="https://x.com/quackgangrh/status/2095050569119674381" data-task="social" target="_blank">REPOST ↗</a>
+        <span class="check"></span>
       </div>
 
-
-      <!-- LIKE -->
       <div class="task">
-        <div class="task-icon like-icon">♥</div>
-
-        <div class="task-content">
-          <h2>Like our pinned post</h2>
-          <p>Like the official QUACK GANG post</p>
-
-          <a
-            href="https://x.com/quackgangrh/status/2095050569119674381"
-            target="_blank"
-            class="task-btn">
-            LIKE ↗
-          </a>
-        </div>
-
-        <div class="check">✓</div>
+        <div class="icon like">♥</div>
+        <div class="copy"><strong>Like our pinned post</strong><small>Like the pinned post</small></div>
+        <a class="task-btn" href="https://x.com/quackgangrh/status/2095050569119674381" data-task="social" target="_blank">LIKE ↗</a>
+        <span class="check"></span>
       </div>
-
     </div>
 
-
-    <!-- WALLET -->
-    <div class="wallet-area">
-
-      <h2>YOUR WALLET ADDRESS</h2>
-
-      <input
-        id="wallet"
-        type="text"
-        placeholder="Enter your wallet address (0x...)"
-        autocomplete="off"
-      >
-
-      <label class="robot-check">
-        <input type="checkbox" id="human">
-        <span>I'm not a robot</span>
-      </label>
-
-      <button id="submit" class="submit-btn">
-        SUBMIT & JOIN THE GANG
-      </button>
-
+    <div class="wallet">
+      <div class="label"><span></span>YOUR WALLET ADDRESS<span></span></div>
+      <input id="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off">
+      <label class="human"><input id="human" type="checkbox"> <span>I'm not a robot</span></label>
+      <button id="submit" class="submit">SUBMIT &amp; JOIN THE GANG 🦆</button>
       <div id="message"></div>
+    </div>
 
-      <div class="counter">
-        <span id="count">0</span> / 1,000 WALLETS
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-icon">🦆</div>
+        <div><b>WHITELIST SPOTS</b><strong><span id="count">0</span> / 1,000</strong><small>Spots are limited. First come, first served.</small></div>
       </div>
-
+      <div class="vline"></div>
+      <div class="stat note">
+        <div class="people">👥</div>
+        <div><b>DON’T MISS OUT!</b><small>Join early and secure your<br>spot in the <em>QUACK GANG.</em></small></div>
+      </div>
+      <div class="bar"><i id="progress"></i></div>
     </div>
+  </div>
+</section>
 
-  </section>
+<section id="about" class="info">
+  <h2>ABOUT QUACK GANG</h2>
+  <p>QUACK GANG is a collection of 4,444 unique QUACKS coming to Robinhood Chain.</p>
+  <p>Different characters. Different styles. One GANG. RAY is only the beginning.</p>
+  <b>BE DIFFERENT. BE QUACK.</b>
+</section>
 
-
-  <!-- ABOUT -->
-  <section id="about" class="info-section">
-
-    <h2>ABOUT QUACK GANG</h2>
-
-    <p>
-      QUACK GANG is a collection of 4,444 unique QUACKS
-      coming to Robinhood Chain.
-    </p>
-
-    <p>
-      Different characters. Different styles. One GANG.
-      RAY is only the beginning.
-    </p>
-
-    <strong>BE DIFFERENT. BE QUACK.</strong>
-
-  </section>
-
-
-  <!-- FAQ -->
-  <section id="faq" class="info-section">
-
-    <h2>FAQ</h2>
-
-    <div class="faq-item">
-      <h3>What is QUACK GANG?</h3>
-      <p>
-        A collection of 4,444 unique QUACKS with different
-        traits, styles, and personalities.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How can I join the Whitelist?</h3>
-      <p>
-        Complete the required tasks and submit your wallet address.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Which tasks are required?</h3>
-      <p>
-        Follow, Like, and Repost the official QUACK GANG post.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How many Whitelist spots are available?</h3>
-      <p>
-        The first 1,000 wallets will have a place in the
-        QUACK GANG story.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How many NFTs will there be?</h3>
-      <p>
-        The collection has a total supply of 4,444 QUACKS.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Which blockchain?</h3>
-      <p>Robinhood Chain.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>When is the mint?</h3>
-      <p>Mint details will be announced soon.</p>
-    </div>
-
-  </section>
-
-</main>
-
+<section id="faq" class="info faq">
+  <h2>FAQ</h2>
+  <details><summary>What is QUACK GANG?</summary><p>A collection of 4,444 unique QUACKS with different traits, styles, and personalities.</p></details>
+  <details><summary>How can I join the Whitelist?</summary><p>Complete the required tasks and submit your wallet address.</p></details>
+  <details><summary>Which tasks are required?</summary><p>Follow, Like, and Repost the official QUACK GANG post.</p></details>
+  <details><summary>How many Whitelist spots are available?</summary><p>The first 1,000 wallets will have a place in the QUACK GANG story.</p></details>
+  <details><summary>How many NFTs will there be?</summary><p>The collection has a total supply of 4,444 QUACKS.</p></details>
+  <details><summary>Which blockchain?</summary><p>Robinhood Chain.</p></details>
+  <details><summary>When is the mint?</summary><p>Mint details will be announced soon.</p></details>
+</section>
 
 <footer>
-  <div class="footer-logo">QUACK GANG</div>
-  <p>BE DIFFERENT. BE QUACK.</p>
-  <small>© 2026 QUACK GANG</small>
+  <div class="footer-logo">QUACK <span>GANG</span></div>
+  <small>© 2026 QUACK GANG. All rights reserved.</small>
+  <b>Built for the different ones. 🦆</b>
 </footer>
 
-
 <script src="app.js"></script>
-
 </body>
 </html>
