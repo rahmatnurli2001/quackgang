@@ -25,10 +25,12 @@ color:#fff;font-size:14px;outline:none}
 display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;
 background:rgba(0,0,0,.55);opacity:0;pointer-events:none;z-index:5}
 .check.visible{opacity:1}
-.follow-check{left:45.8%;top:53.9%}
-.repost-check{left:45.8%;top:60.7%}
-.like-check{left:45.8%;top:67.1%}
-.comment-check{left:84.0%;top:53.9%}
+
+/* Precisely centered on the existing white task circles */
+.follow-check{left:45.15%;top:17.26%}
+.repost-check{left:45.15%;top:23.65%}
+.like-check{left:45.15%;top:30.03%}
+.comment-check{left:83.31%;top:17.26%}
 
 .wallet{position:absolute;left:11.7%;top:74.05%;width:76%;height:4.05%;
 border:1px solid #444;border-radius:8px;background:#191919;color:#fff;
