@@ -1,44 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ffc400">
-  <title>QUACK GANG — Whitelist</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffc400">
+<title>QUACK GANG — Whitelist</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <main class="page">
-    <img class="design" src="/design.png" alt="QUACK GANG whitelist page">
+<main class="page">
+<img class="design" src="/design.png" alt="QUACK GANG whitelist page">
+<div class="overlay" aria-label="Interactive controls">
+<a class="hotspot home" href="#home" aria-label="Home"></a>
+<a class="hotspot about" href="#about" aria-label="About"></a>
+<a class="hotspot faq" href="#faq" aria-label="FAQ"></a>
+<a class="hotspot join" href="#whitelist" aria-label="Join the gang"></a>
 
-    <div class="overlay" aria-label="Interactive controls">
-      <a class="hotspot home" href="#home" aria-label="Home"></a>
-      <a class="hotspot about" href="#about" aria-label="About"></a>
-      <a class="hotspot faq" href="#faq" aria-label="FAQ"></a>
-      <a class="hotspot join" href="#whitelist" aria-label="Join the gang"></a>
+<a class="task follow" data-task="follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" aria-label="Follow @quackgangrh on X"></a>
+<a class="task repost" data-task="repost" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Repost pinned post"></a>
+<a class="task like" data-task="like" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Like pinned post"></a>
+<a class="task quote" data-task="quote" href="#" aria-label="Quote pinned post"></a>
 
-      <a class="task follow" data-task="follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener" aria-label="Follow @quackgangrh on X"></a>
-      <a class="task repost" data-task="repost" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Repost pinned post"></a>
-      <a class="task like" data-task="like" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Like pinned post"></a>
-      <a class="task quote" data-task="quote" href="#" aria-label="Quote pinned post"></a>
+<span class="check follow-check" aria-hidden="true">✓</span>
+<span class="check repost-check" aria-hidden="true">✓</span>
+<span class="check like-check" aria-hidden="true">✓</span>
+<span class="check quote-check" aria-hidden="true">✓</span>
 
-      <span class="check follow-check" aria-hidden="true">✓</span>
-      <span class="check repost-check" aria-hidden="true">✓</span>
-      <span class="check like-check" aria-hidden="true">✓</span>
-      <span class="check quote-check" aria-hidden="true">✓</span>
+<input id="wallet" class="wallet" type="text" inputmode="text" autocomplete="off" aria-label="Wallet address" placeholder="Enter your wallet address (0x...)">
+<button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
+<div id="message" role="status" aria-live="polite"></div>
 
-      <input id="wallet" class="wallet" type="text" inputmode="text" autocomplete="off"
-             aria-label="Wallet address" placeholder="Enter your wallet address (0x...)">
-
-      <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
-      <div id="message" role="status" aria-live="polite"></div>
-
-      <span id="home" class="anchor"></span>
-      <span id="whitelist" class="anchor whitelist-anchor"></span>
-      <span id="about" class="anchor about-anchor"></span>
-      <span id="faq" class="anchor faq-anchor"></span>
-    </div>
-  </main>
-  <script src="/app.js"></script>
+<span id="home" class="anchor"></span>
+<span id="whitelist" class="anchor whitelist-anchor"></span>
+<span id="about" class="anchor about-anchor"></span>
+<span id="faq" class="anchor faq-anchor"></span>
+</div>
+</main>
+<script src="/app.js"></script>
 </body>
 </html>

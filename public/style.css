@@ -9,43 +9,21 @@ body{font-family:Arial,Helvetica,sans-serif}
 .hotspot.home{left:36.5%;top:1.0%;width:6.2%;height:2.8%}
 .hotspot.about{left:46.2%;top:1.0%;width:7%;height:2.8%}
 .hotspot.faq{left:56.3%;top:1.0%;width:5.5%;height:2.8%}
-.hotspot.join{right:2.4%;top:1.0%;width:15.0%;height:3.0%}
-
-/* Exact task button zones from the supplied final design. */
-.task.follow{left:37.0%;top:25.55%;width:8.5%;height:3.0%}
-.task.repost{left:37.0%;top:30.3%;width:8.5%;height:3.0%}
-.task.like{left:37.0%;top:34.25%;width:8.5%;height:3.0%}
-.task.quote{left:78.2%;top:25.7%;width:8.0%;height:3.0%}
-
-/* The circles are already part of design.png; these only place the ✓ inside them. */
-.check{position:absolute;transform:translate(-50%,-50%);width:2.55%;height:2.55%;
-  display:grid;place-items:center;border:0;border-radius:50%;background:transparent;
-  color:#fff;font-size:2.0%;font-weight:900;line-height:1;opacity:0;
-  pointer-events:none;z-index:4;text-shadow:0 1px 2px #000}
+.hotspot.join{right:2.4%;top:1.0%;width:15%;height:3%}
+.task.follow{left:37%;top:25.55%;width:8.5%;height:3%}
+.task.repost{left:37%;top:30.3%;width:8.5%;height:3%}
+.task.like{left:37%;top:34.25%;width:8.5%;height:3%}
+.task.quote{left:78.2%;top:25.7%;width:8%;height:3%}
+.check{position:absolute;transform:translate(-50%,-50%);width:2.55%;height:2.55%;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:#fff;font-size:2%;font-weight:900;line-height:1;opacity:0;pointer-events:none;z-index:4;text-shadow:0 1px 2px #000}
 .check.visible{opacity:1}
 .follow-check{left:47.59%;top:26.82%}
 .repost-check{left:47.59%;top:30.85%}
 .like-check{left:47.59%;top:34.83%}
 .quote-check{left:88.34%;top:26.88%}
-
-/* One real input only; the visual field/border is already baked into design.png. */
-.wallet{position:absolute;left:9.35%;top:38.65%;width:81.3%;height:2.35%;
-  padding:0 1.4%;border:0;border-radius:8px;background:transparent;color:#fff;
-  font-size:1.55cqw;line-height:1;outline:none;pointer-events:auto}
+.wallet{position:absolute;left:9.35%;top:38.65%;width:81.3%;height:2.35%;padding:0 1.4%;border:0;border-radius:8px;background:transparent;color:#fff;font-size:1.55cqw;line-height:1;outline:none;pointer-events:auto}
 .wallet::placeholder{color:transparent}
-.wallet:focus{outline:none}
-
 .submit{left:30.9%;top:42.1%;width:38.3%;height:3.1%}
-#message{position:absolute;left:15%;top:45.7%;width:70%;text-align:center;
-  font-size:1.4cqw;font-weight:900;line-height:1.2;color:#20d84b;z-index:6;pointer-events:none}
-
+#message{position:absolute;left:15%;top:45.7%;width:70%;text-align:center;font-size:1.4cqw;font-weight:900;line-height:1.2;color:#20d84b;z-index:6;pointer-events:none}
 .anchor{position:absolute;left:0;width:1px;height:1px}
-.anchor.whitelist-anchor{top:19%}
-.anchor.about-anchor{top:50%}
-.anchor.faq-anchor{top:76%}
-
-@media(max-width:700px){
-  .wallet{font-size:2.35cqw}
-  #message{font-size:2.2cqw}
-  .check{font-size:2.05%;width:2.6%;height:2.6%}
-}
+.anchor.whitelist-anchor{top:19%}.anchor.about-anchor{top:50%}.anchor.faq-anchor{top:76%}
+@media(max-width:700px){.wallet{font-size:2.35cqw}#message{font-size:2.2cqw}.check{font-size:2.05%;width:2.6%;height:2.6%}}
