@@ -1,1 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>QUACK GANG</title>
+<link rel="stylesheet" href="style.css?v=final1">
+</head>
+<body>
+<div class="page">
+  <img class="design" src="design.png" alt="QUACK GANG">
+  <div class="overlay">
+    <a class="nav home" href="#home" aria-label="Home"></a>
+    <a class="nav about" href="#about" aria-label="About"></a>
+    <a class="nav faq" href="#faq" aria-label="FAQ"></a>
+    <a class="nav join" href="#whitelist" aria-label="Join the Gang"></a>
 
+    <a class="task follow" data-task="follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener"></a>
+    <a class="task repost" data-task="repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener"></a>
+    <a class="task like" data-task="like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener"></a>
+    <a class="task quote" data-task="quote" href="#" target="_blank" rel="noopener"></a>
+
+    <span class="check follow-check">✓</span>
+    <span class="check repost-check">✓</span>
+    <span class="check like-check">✓</span>
+    <span class="check quote-check">✓</span>
+
+    <input id="wallet" class="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off">
+    <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
+
+    <span id="live-number" class="live-number" aria-live="polite">0</span>
+    <span id="live-fill" class="live-fill" aria-hidden="true"></span>
+    <div id="message"></div>
+    <span id="whitelist" class="anchor"></span>
+  </div>
+</div>
+<script src="app.js?v=final1"></script>
+</body>
+</html>
