@@ -1,39 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>QUACK GANG</title>
-<link rel="stylesheet" href="style.css?v=final2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffc400">
+  <title>QUACK GANG — Whitelist</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="page">
-  <img class="design" src="design.png" alt="QUACK GANG">
-  <div class="overlay">
-    <a class="nav home" href="#home" aria-label="Home"></a>
-    <a class="nav about" href="#about" aria-label="About"></a>
-    <a class="nav faq" href="#faq" aria-label="FAQ"></a>
-    <a class="nav join" href="#whitelist" aria-label="Join the Gang"></a>
+  <main class="page">
+    <img class="design" src="/design.png" alt="QUACK GANG whitelist page">
 
-    <a class="task follow" data-task="follow" href="https://x.com/quackgangrh" target="_blank" rel="noopener"></a>
-    <a class="task repost" data-task="repost" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener"></a>
-    <a class="task like" data-task="like" href="https://x.com/quackgangrh/status/2095050569119674381" target="_blank" rel="noopener"></a>
-    <a class="task quote" data-task="quote" href="#" target="_blank" rel="noopener"></a>
+    <div class="overlay" aria-label="Interactive controls">
+      <a class="hotspot home" href="#home" aria-label="Home"></a>
+      <a class="hotspot about" href="#about" aria-label="About"></a>
+      <a class="hotspot faq" href="#faq" aria-label="FAQ"></a>
+      <a class="hotspot join" href="#whitelist" aria-label="Join the gang"></a>
 
-    <span class="check follow-check">✓</span>
-    <span class="check repost-check">✓</span>
-    <span class="check like-check">✓</span>
-    <span class="check quote-check">✓</span>
+      <a class="task follow" data-task="follow" href="https://x.com/QuackGangNFT" target="_blank" rel="noopener" aria-label="Follow Quack Gang on X"></a>
+      <a class="task repost" data-task="repost" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Repost pinned post"></a>
+      <a class="task like" data-task="like" href="https://x.com/QuackGangRH/status/2095050569119674381?s=20" target="_blank" rel="noopener" aria-label="Like pinned post"></a>
+      <a class="task quote" data-task="quote" href="#" aria-label="Quote pinned post"></a>
 
-    <input id="wallet" class="wallet" type="text" placeholder="Enter your wallet address (0x...)" autocomplete="off">
-    <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
+      <span class="check follow-check" aria-hidden="true">✓</span>
+      <span class="check repost-check" aria-hidden="true">✓</span>
+      <span class="check like-check" aria-hidden="true">✓</span>
+      <span class="check quote-check" aria-hidden="true">✓</span>
 
-    <span id="live-number" class="live-number" aria-live="polite">0 / 1,000</span>
-    <span id="live-fill" class="live-fill" aria-hidden="true"></span>
-    <div id="message"></div>
-    <span id="whitelist" class="anchor"></span>
-  </div>
-</div>
-<script src="app.js?v=final2"></script>
+      <input id="wallet" class="wallet" type="text" inputmode="text" autocomplete="off"
+             aria-label="Wallet address" placeholder="Enter your wallet address (0x...)">
+
+      <button id="submit" class="submit" type="button" aria-label="Submit and join the gang"></button>
+      <div id="message" role="status" aria-live="polite"></div>
+
+      <span id="home" class="anchor"></span>
+      <span id="whitelist" class="anchor whitelist-anchor"></span>
+      <span id="about" class="anchor about-anchor"></span>
+      <span id="faq" class="anchor faq-anchor"></span>
+    </div>
+  </main>
+  <script src="/app.js"></script>
 </body>
 </html>

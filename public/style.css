@@ -1,45 +1,51 @@
 *{box-sizing:border-box}
-html{margin:0;padding:0;background:#171717;overflow-x:hidden}
-body{margin:0;padding:0;background:#171717;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-.page{position:relative;width:100%;max-width:1086px;margin:0 auto;line-height:0}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0;background:#ffc400;overflow-x:hidden}
+body{font-family:Arial,Helvetica,sans-serif}
+.page{position:relative;width:100%;max-width:864px;margin:0 auto;line-height:0}
 .design{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-.overlay{position:absolute;inset:0;width:100%;height:100%;line-height:normal}
-.nav,.task{position:absolute;display:block;background:transparent;border:0;padding:0;cursor:pointer;touch-action:manipulation}
+.overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hotspot,.task,.submit{position:absolute;display:block;background:transparent;border:0;padding:0;cursor:pointer;touch-action:manipulation;pointer-events:auto}
+.hotspot.home{left:36.5%;top:1.0%;width:6.2%;height:2.8%}
+.hotspot.about{left:46.2%;top:1.0%;width:7%;height:2.8%}
+.hotspot.faq{left:56.3%;top:1.0%;width:5.5%;height:2.8%}
+.hotspot.join{right:2.4%;top:1.0%;width:15.0%;height:3.0%}
 
-.nav.home{left:34.5%;top:1.1%;width:7%;height:3.2%}
-.nav.about{left:43.8%;top:1.1%;width:8%;height:3.2%}
-.nav.faq{left:53.0%;top:1.1%;width:6.5%;height:3.2%}
-.nav.join{left:80.6%;top:1.0%;width:15%;height:3.5%}
+/* Exact task button zones from the supplied final design. */
+.task.follow{left:37.0%;top:25.55%;width:8.5%;height:3.0%}
+.task.repost{left:37.0%;top:30.3%;width:8.5%;height:3.0%}
+.task.like{left:37.0%;top:34.25%;width:8.5%;height:3.0%}
+.task.quote{left:78.2%;top:25.7%;width:8.0%;height:3.0%}
 
-.task.follow{left:35.0%;top:26.3%;width:11%;height:3.8%}
-.task.repost{left:35.0%;top:30.4%;width:11%;height:3.8%}
-.task.like{left:35.0%;top:34.4%;width:11%;height:3.8%}
-.task.quote{left:76.0%;top:26.3%;width:11%;height:3.8%}
-
-.check{position:absolute;display:grid;place-items:center;width:2.15%;height:2.15%;font-size:1.45%;font-weight:900;color:#fff;line-height:1;background:transparent;opacity:0;pointer-events:none;z-index:5;transform:translate(-50%,-50%)}
+/* The circles are already part of design.png; these only place the ✓ inside them. */
+.check{position:absolute;transform:translate(-50%,-50%);width:2.55%;height:2.55%;
+  display:grid;place-items:center;border:0;border-radius:50%;background:transparent;
+  color:#fff;font-size:2.0%;font-weight:900;line-height:1;opacity:0;
+  pointer-events:none;z-index:4;text-shadow:0 1px 2px #000}
 .check.visible{opacity:1}
-.follow-check{left:45.5%;top:28.55%}
-.repost-check{left:45.5%;top:32.7%}
-.like-check{left:45.5%;top:36.7%}
-.quote-check{left:85.5%;top:28.55%}
+.follow-check{left:47.65%;top:26.85%}
+.repost-check{left:47.65%;top:31.55%}
+.like-check{left:47.65%;top:35.45%}
+.quote-check{left:88.55%;top:26.85%}
 
-/* Exactly one wallet input, aligned with the baked wallet field. */
-.wallet{position:absolute;left:9.0%;top:44.82%;width:78.2%;height:1.75%;padding:0 1.3cqw;border:0;background:transparent;color:#fff;font-size:1.35cqw;outline:none;line-height:1.1}
+/* One real input only; the visual field/border is already baked into design.png. */
+.wallet{position:absolute;left:9.35%;top:38.65%;width:81.3%;height:2.35%;
+  padding:0 1.4%;border:0;border-radius:8px;background:transparent;color:#fff;
+  font-size:1.55cqw;line-height:1;outline:none;pointer-events:auto}
 .wallet::placeholder{color:transparent}
+.wallet:focus{outline:none}
 
-/* Submit hotspot aligned with the final artwork. */
-.submit{position:absolute;left:30.8%;top:48.2%;width:34.8%;height:3.0%;border:0;background:transparent;cursor:pointer;touch-action:manipulation}
+.submit{left:30.9%;top:42.1%;width:38.3%;height:3.1%}
+#message{position:absolute;left:15%;top:45.7%;width:70%;text-align:center;
+  font-size:1.4cqw;font-weight:900;line-height:1.2;color:#20d84b;z-index:6;pointer-events:none}
 
-/* Live D1 counter in the left side of the lower whitelist card. */
-.live-number{position:absolute;left:18.3%;top:51.0%;width:25%;height:3.5%;display:flex;align-items:center;background:transparent;color:#fff;font-size:2.55cqw;font-weight:900;line-height:1;z-index:7;pointer-events:none;opacity:1}
-.live-fill{position:absolute;left:18.2%;top:54.55%;width:25.2%;height:.65%;min-height:4px;background:#ffc400;border-radius:999px;transform-origin:left center;transform:scaleX(0);z-index:7;pointer-events:none;opacity:1}
-
-#message{position:absolute;left:20%;top:57%;width:60%;text-align:center;font-size:1.15cqw;font-weight:900;color:#20d84b;z-index:9;pointer-events:none}
-.anchor{position:absolute;left:0;top:50%;width:1px;height:1px}
+.anchor{position:absolute;left:0;width:1px;height:1px}
+.anchor.whitelist-anchor{top:19%}
+.anchor.about-anchor{top:50%}
+.anchor.faq-anchor{top:76%}
 
 @media(max-width:700px){
- .wallet{font-size:2.1cqw}
- #message{font-size:2cqw}
- .live-number{font-size:2.55cqw}
- .live-fill{min-height:3px}
+  .wallet{font-size:2.35cqw}
+  #message{font-size:2.2cqw}
+  .check{font-size:2.05%;width:2.6%;height:2.6%}
 }
